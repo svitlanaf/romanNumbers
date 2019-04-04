@@ -6,9 +6,9 @@ $(document).ready(function(){
     var romanNumbers = ["M", "CM", "D", "CD", "C","XC","L","XL","X","IX" ,"V","IV", "I"];
     var result = "";
 
-    if (number > 3999) {
-      alert ("Please enter number from 0 to 3999")
-    };
+    if (number > 3999 || ($("input#userInput").val() === "") || (isNaN($("input#userInput").val())) || (/[$-/:-?{-~!"^_`\[\]]/) || ($("input#userInput").val() === 0))  {
+      alert ("Please enter number from 1 to 3999")
+    } else {
     // i =0
     // res='Xxxv'
     //arabicNumbers =''50
@@ -24,9 +24,10 @@ $(document).ready(function(){
 
     }
 }
+
     $(".output").text(result);
     $("#result").show();
-
+}
   });
 
 });
