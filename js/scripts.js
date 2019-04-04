@@ -5,7 +5,7 @@ $(document).ready(function(){
     var arabicNumbers = [1000, 900, 500, 400, 100, 90, 50,40, 10,9, 5,4, 1];
     var romanNumbers = ["M", "CM", "D", "CD", "C","XC","L","XL","X","IX" ,"V","IV", "I"];
     var result = "";
-    
+
     if (number > 3999) {
       alert ("Please enter number from 0 to 3999")
     };
@@ -24,8 +24,8 @@ $(document).ready(function(){
 
     }
 }
-
-    console.log(result);
+    $(".output").text(result);
+    $("#result").show();
 
   });
 
